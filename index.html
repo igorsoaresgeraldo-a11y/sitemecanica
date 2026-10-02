@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================ SEO ============================ -->
+  <title>Oficina Mecânica Premium | AUTOCORE</title>
+  <meta name="description" content="Manutenção automotiva, diagnóstico, freios, suspensão e serviços especializados. Agende seu atendimento na AUTOCORE." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://www.autocore.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="AUTOCORE" />
+  <meta property="og:title" content="Oficina Mecânica Premium | AUTOCORE" />
+  <meta property="og:description" content="Manutenção automotiva, diagnóstico, freios, suspensão e serviços especializados. Agende seu atendimento." />
+  <meta property="og:url" content="https://www.autocore.com.br/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=75" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fontes: Bebas Neue (títulos) + Inter (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Imagem do hero com prioridade de carregamento -->
+  <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=75"
+        imagesrcset="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1280&q=75 1280w,
+                     https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=75 1920w"
+        imagesizes="100vw" />
+
+  <!-- Tailwind CSS (CDN) + configuração de cores e fontes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: '#050505',
+            coal: '#0D0F10',
+            brand: { DEFAULT: '#E21B16', dark: '#A90F0B' },
+            bone: '#F5F5F5',
+            steel: '#B8B8B8',
+            line: '#343638',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Fallback para navegação sem JavaScript -->
+  <noscript>
+    <style>
+      [data-reveal] { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <!-- Dados estruturados: LocalBusiness / AutoRepair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "AUTOCORE — Centro Automotivo",
+    "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=75",
+    "url": "https://www.autocore.com.br/",
+    "telephone": "+551134567890",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Exemplo, 1000",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "00000-000",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-night text-bone font-sans antialiased">
+
+  <!-- ==================================================================
+       HEADER
+       ================================================================== -->
+  <header class="site-header">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3" aria-label="AUTOCORE — Centro Automotivo — página inicial">
+        <svg viewBox="0 0 34 34" class="h-9 w-9 shrink-0" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17 2 33 32h-9.4l-2.1-4.4h-8.9L10.5 32H1L17 2Zm0 9.6-3.1 6.6h6.2L17 11.6Z"
+                fill="#E21B16" />
+        </svg>
+        <span class="leading-none">
+          <span class="block font-display text-2xl tracking-wider text-bone">AUTOCORE</span>
+          <span class="block text-[9px] font-semibold tracking-[0.34em] text-steel">CENTRO AUTOMOTIVO</span>
+        </span>
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Início</a>
+        <a href="#servicos" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Serviços</a>
+        <a href="#sobre" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Sobre nós</a>
+        <a href="#diferenciais" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Diferenciais</a>
+        <a href="#resultados" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Resultados</a>
+        <a href="#contato" class="nav-link text-[13px] font-medium tracking-wide text-steel transition-colors hover:text-bone">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <!-- WhatsApp (mobile, no header) -->
+        <a href="https://wa.me/5511999999999" data-wa class="flex h-11 w-11 items-center justify-center rounded-full border border-line text-[#25D366] transition-colors hover:border-[#25D366] lg:hidden" aria-label="Falar no WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+        </a>
+
+        <!-- CTA desktop -->
+        <a href="#agendar" class="btn btn-primary hidden sm:inline-flex">
+          Agendar serviço
+          <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </a>
+
+        <!-- Hamburger -->
+        <button data-menu-toggle type="button" class="flex h-11 w-11 flex-col items-center justify-center gap-[6px] rounded-full border border-line transition-colors hover:border-steel lg:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="block h-[2px] w-4 bg-bone"></span>
+          <span class="block h-[2px] w-4 bg-bone"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="mobile-menu border-t border-line bg-night/95 backdrop-blur-md lg:hidden">
+      <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-6 sm:px-8" aria-label="Navegação mobile">
+        <a href="#inicio" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Início</a>
+        <a href="#servicos" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Serviços</a>
+        <a href="#sobre" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Sobre nós</a>
+        <a href="#diferenciais" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Diferenciais</a>
+        <a href="#resultados" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Resultados</a>
+        <a href="#contato" class="border-b border-line/60 py-3.5 font-display text-2xl tracking-wide text-bone hover:text-brand">Contato</a>
+        <a href="#agendar" class="btn btn-primary mt-5 w-full">Agendar serviço</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================================================================
+         HERO
+         ================================================================== -->
+    <section id="inicio" class="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-28 pb-20">
+      <div class="hero__media absolute inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=75"
+          srcset="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1280&q=75 1280w,
+                  https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=75 1920w"
+          sizes="100vw"
+          alt="Mecânico profissional trabalhando no motor de um veículo"
+          fetchpriority="high"
+          width="1920" height="1280"
+          class="h-full w-full scale-[1.06] object-cover"
+          style="object-position: 62% 50%" />
+        <div class="hero__overlay absolute inset-0"></div>
+      </div>
+
+      <div class="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div class="max-w-3xl">
+          <p class="eyebrow mb-6" data-reveal="fade">Centro automotivo premium</p>
+
+          <h1 class="font-display uppercase leading-[0.9] tracking-[0.01em] text-[clamp(2.9rem,10vw,8.5rem)]" data-reveal data-delay="1">
+            <span class="block">Seu carro.</span>
+            <span class="block">Nossa <span class="text-brand">Experiência.</span></span>
+          </h1>
+
+          <p class="mt-7 max-w-xl text-base leading-relaxed text-steel sm:text-lg" data-reveal data-delay="2">
+            Manutenção profissional, diagnóstico preciso e cuidado de alto nível
+            para manter seu carro sempre pronto para a estrada.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center" data-reveal data-delay="3">
+            <a href="#agendar" class="btn btn-primary w-full sm:w-auto">
+              Agendar serviço
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+            <a href="#servicos" class="btn btn-outline w-full sm:w-auto">Conhecer serviços</a>
+          </div>
+
+          <!-- Indicadores de confiança -->
+          <ul class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] font-bold uppercase tracking-[0.18em] text-steel" data-reveal data-delay="4">
+            <li class="flex items-center gap-2">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E21B16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+              Serviço rápido
+            </li>
+            <li aria-hidden="true" class="text-brand">•</li>
+            <li>Preço justo</li>
+            <li aria-hidden="true" class="text-brand">•</li>
+            <li>Qualidade garantida</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SERVIÇOS
+         ================================================================== -->
+    <section id="servicos" class="relative border-t border-line bg-night py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="eyebrow mb-5" data-reveal="fade">O que fazemos</p>
+          <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-[0.95]" data-reveal>
+            Nossos <span class="text-brand">Serviços</span>
+          </h2>
+          <p class="mt-5 max-w-xl text-steel" data-reveal data-delay="1">
+            Soluções completas para manutenção, diagnóstico e performance do seu veículo.
+          </p>
+        </div>
+
+        <!-- Grid de cards -->
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <!-- CARD 01 — TROCA DE ÓLEO -->
+          <article class="service-card group overflow-hidden rounded-lg border border-line bg-coal" data-reveal data-delay="1">
+            <div class="relative aspect-[4/3] overflow-hidden bg-night">
+              <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=70"
+                   alt="Troca de óleo sendo realizada no motor do veículo" loading="lazy" width="800" height="600"
+                   class="service-img h-full w-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-coal via-coal/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 font-display text-sm tracking-[0.2em] text-brand">01</span>
+            </div>
+            <div class="p-6">
+              <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-md border border-line text-brand transition-colors group-hover:border-brand/60">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69 16.66 7.35a8 8 0 1 1-11.31 0Z" /></svg>
+              </span>
+              <h3 class="font-display text-2xl uppercase tracking-wide">Troca de óleo</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-relaxed text-steel">
+                Óleo e filtros de qualidade para proteger o motor e prolongar sua vida útil.
+              </p>
+              <span class="card-line mt-5"></span>
+              <a href="#agendar" data-service-target="Troca de óleo" class="link-arrow mt-5">
+                Saiba mais
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 02 — FREIOS -->
+          <article class="service-card group overflow-hidden rounded-lg border border-line bg-coal" data-reveal data-delay="2">
+            <div class="relative aspect-[4/3] overflow-hidden bg-night">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Porsche_Panamera_Turbo_S_%28US%29_%286361618809%29.jpg/960px-Porsche_Panamera_Turbo_S_%28US%29_%286361618809%29.jpg"
+                   alt="Roda com disco e pinça de freio de veículo premium" loading="lazy" width="960" height="640"
+                   class="service-img h-full w-full object-cover opacity-85" style="object-position: 38% 65%" />
+              <div class="absolute inset-0 bg-gradient-to-t from-coal via-coal/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 font-display text-sm tracking-[0.2em] text-brand">02</span>
+            </div>
+            <div class="p-6">
+              <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-md border border-line text-brand transition-colors group-hover:border-brand/60">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg>
+              </span>
+              <h3 class="font-display text-2xl uppercase tracking-wide">Revisão de freios</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-relaxed text-steel">
+                Segurança começa com um sistema de frenagem em perfeito funcionamento.
+              </p>
+              <span class="card-line mt-5"></span>
+              <a href="#agendar" data-service-target="Freios" class="link-arrow mt-5">
+                Saiba mais
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 03 — DIAGNÓSTICO -->
+          <article class="service-card group overflow-hidden rounded-lg border border-line bg-coal" data-reveal data-delay="3">
+            <div class="relative aspect-[4/3] overflow-hidden bg-night">
+              <img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=800&q=70"
+                   alt="Técnico trabalhando em componentes elétricos durante o diagnóstico" loading="lazy" width="800" height="600"
+                   class="service-img h-full w-full object-cover opacity-85" style="object-position: 50% 50%" />
+              <div class="absolute inset-0 bg-gradient-to-t from-coal via-coal/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 font-display text-sm tracking-[0.2em] text-brand">03</span>
+            </div>
+            <div class="p-6">
+              <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-md border border-line text-brand transition-colors group-hover:border-brand/60">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5" /><path d="M9 8V2" /><path d="M15 8V2" /><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></svg>
+              </span>
+              <h3 class="font-display text-2xl uppercase tracking-wide">Diagnóstico automotivo</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-relaxed text-steel">
+                Tecnologia de diagnóstico para identificar problemas com precisão.
+              </p>
+              <span class="card-line mt-5"></span>
+              <a href="#agendar" data-service-target="Diagnóstico" class="link-arrow mt-5">
+                Saiba mais
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 04 — AR-CONDICIONADO -->
+          <article class="service-card group overflow-hidden rounded-lg border border-line bg-coal" data-reveal data-delay="4">
+            <div class="relative aspect-[4/3] overflow-hidden bg-night">
+              <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=70"
+                   alt="Interior automotivo com painel e saídas de ar-condicionado" loading="lazy" width="800" height="600"
+                   class="service-img h-full w-full object-cover opacity-85" style="object-position: 55% 50%" />
+              <div class="absolute inset-0 bg-gradient-to-t from-coal via-coal/25 to-transparent"></div>
+              <span class="absolute top-4 left-4 font-display text-sm tracking-[0.2em] text-brand">04</span>
+            </div>
+            <div class="p-6">
+              <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-md border border-line text-brand transition-colors group-hover:border-brand/60">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20" /><path d="M12 2v20" /><path d="m4.93 4.93 14.14 14.14" /><path d="m19.07 4.93-14.14 14.14" /></svg>
+              </span>
+              <h3 class="font-display text-2xl uppercase tracking-wide">Ar-condicionado</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-relaxed text-steel">
+                Conforto e eficiência para você dirigir tranquilo em qualquer temperatura.
+              </p>
+              <span class="card-line mt-5"></span>
+              <a href="#agendar" data-service-target="Ar-condicionado" class="link-arrow mt-5">
+                Saiba mais
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Botão: ver todos os serviços -->
+        <div class="mt-12 flex justify-center" data-reveal="fade">
+          <button type="button" data-toggle-services aria-expanded="false" aria-controls="todos-servicos"
+                  class="btn btn-outline group">
+            <span data-label>VER TODOS OS SERVIÇOS</span>
+            <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </button>
+        </div>
+
+        <!-- Lista completa de serviços -->
+        <div id="todos-servicos" class="full-services mt-10 rounded-lg border border-line bg-coal p-6 sm:p-8" hidden>
+          <ul class="grid gap-x-8 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
+            <li><a href="#agendar" data-service-target="Troca de óleo" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Troca de óleo</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Freios" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Freios</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Suspensão" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Suspensão</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Alinhamento" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Alinhamento</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Balanceamento" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Balanceamento</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Diagnóstico" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Diagnóstico eletrônico</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Injeção eletrônica</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Ar-condicionado" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Ar-condicionado</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Bateria</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Sistema de arrefecimento</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Correias</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Embreagem</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Revisão" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Revisão preventiva</span><span class="text-brand">+</span></a></li>
+            <li><a href="#agendar" data-service-target="Outro" class="flex items-center justify-between border-b border-line/70 py-3.5 text-sm text-steel transition-colors hover:text-bone"><span>Manutenção geral</span><span class="text-brand">+</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         POR QUE ESCOLHER A GENTE (DIFERENCIAIS)
+         ================================================================== -->
+    <section id="diferenciais" class="border-t border-line bg-coal py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="eyebrow mb-5" data-reveal="fade">Diferenciais</p>
+          <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-[0.95]" data-reveal>
+            Por que escolher <span class="text-brand">a gente?</span>
+          </h2>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- 01 -->
+          <div class="border-t-2 border-line pt-7 transition-colors hover:border-brand" data-reveal data-delay="1">
+            <div class="flex items-center justify-between">
+              <span class="text-brand">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+              </span>
+              <span class="font-display text-sm tracking-[0.25em] text-line">01</span>
+            </div>
+            <h3 class="mt-5 font-display text-xl uppercase tracking-wide">Mecânicos qualificados</h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-steel">Profissionais preparados para cuidar do seu veículo.</p>
+          </div>
+
+          <!-- 02 -->
+          <div class="border-t-2 border-line pt-7 transition-colors hover:border-brand" data-reveal data-delay="2">
+            <div class="flex items-center justify-between">
+              <span class="text-brand">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
+              </span>
+              <span class="font-display text-sm tracking-[0.25em] text-line">02</span>
+            </div>
+            <h3 class="mt-5 font-display text-xl uppercase tracking-wide">Peças de qualidade</h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-steel">Componentes selecionados para maior durabilidade.</p>
+          </div>
+
+          <!-- 03 -->
+          <div class="border-t-2 border-line pt-7 transition-colors hover:border-brand" data-reveal data-delay="3">
+            <div class="flex items-center justify-between">
+              <span class="text-brand">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+              </span>
+              <span class="font-display text-sm tracking-[0.25em] text-line">03</span>
+            </div>
+            <h3 class="mt-5 font-display text-xl uppercase tracking-wide">Preço transparente</h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-steel">Sem cobranças escondidas ou surpresas.</p>
+          </div>
+
+          <!-- 04 -->
+          <div class="border-t-2 border-line pt-7 transition-colors hover:border-brand" data-reveal data-delay="4">
+            <div class="flex items-center justify-between">
+              <span class="text-brand">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>
+              </span>
+              <span class="font-display text-sm tracking-[0.25em] text-line">04</span>
+            </div>
+            <h3 class="mt-5 font-display text-xl uppercase tracking-wide">Serviço rápido</h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-steel">Seu tempo também é importante para nós.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SOBRE A EMPRESA
+         ================================================================== -->
+    <section id="sobre" class="bg-night py-24 sm:py-32">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+        <!-- Imagem -->
+        <div class="relative" data-reveal="left">
+          <div class="overflow-hidden rounded-lg border border-line">
+            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1100&q=75"
+                 alt="Mecânico trabalhando em veículo na oficina" loading="lazy" width="1100" height="733"
+                 class="h-full w-full object-cover" style="aspect-ratio: 4 / 3; object-position: 50% 55%" />
+          </div>
+          <div class="pointer-events-none absolute -bottom-6 -right-6 -z-10 hidden h-40 w-40 border-2 border-brand sm:block"></div>
+        </div>
+
+        <!-- Texto -->
+        <div data-reveal="right">
+          <p class="eyebrow mb-5">Sobre nós</p>
+          <h2 class="font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-[0.95]">
+            Experiência que você <span class="text-brand">pode confiar.</span>
+          </h2>
+          <p class="mt-6 leading-relaxed text-steel">
+            Cuidamos do seu veículo com conhecimento técnico, equipamentos modernos
+            e atenção aos detalhes.
+          </p>
+          <p class="mt-4 leading-relaxed text-steel">
+            Nosso objetivo é oferecer uma experiência diferente em manutenção
+            automotiva: diagnóstico transparente, serviço de qualidade e
+            atendimento próximo.
+          </p>
+
+          <ul class="mt-8 space-y-3.5">
+            <li class="flex items-center gap-3 text-sm text-bone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E21B16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+              Diagnóstico claro antes do serviço
+            </li>
+            <li class="flex items-center gap-3 text-sm text-bone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E21B16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+              Equipamentos de última geração
+            </li>
+            <li class="flex items-center gap-3 text-sm text-bone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E21B16" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+              Garantia sobre os serviços executados
+            </li>
+          </ul>
+
+          <div class="mt-9">
+            <a href="#contato" class="btn btn-outline">
+              Conheça nossa história
+              <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         NÚMEROS / PROVA SOCIAL
+         ATENÇÃO: edite os valores abaixo (data-count / data-suffix) para
+         usar os números reais da empresa. Não publique números inventados.
+         ================================================================== -->
+    <section class="stats-bg relative overflow-hidden border-y border-line py-16 sm:py-20">
+      <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1600&q=60"
+           alt="" aria-hidden="true" loading="lazy" width="1600" height="1067"
+           class="absolute inset-0 h-full w-full object-cover" />
+      <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 text-center sm:px-8 lg:grid-cols-4">
+        <div class="px-4" data-reveal data-delay="1">
+          <p class="font-display text-[clamp(2.8rem,7vw,4.5rem)] leading-none text-bone">
+            <span data-count="10" data-suffix="+">0</span>
+          </p>
+          <p class="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-steel">Anos de experiência</p>
+        </div>
+        <div class="px-4 lg:border-l lg:border-line" data-reveal data-delay="2">
+          <p class="font-display text-[clamp(2.8rem,7vw,4.5rem)] leading-none text-bone">
+            <span data-count="2500" data-suffix="+">0</span>
+          </p>
+          <p class="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-steel">Veículos atendidos</p>
+        </div>
+        <div class="px-4 lg:border-l lg:border-line" data-reveal data-delay="3">
+          <p class="font-display text-[clamp(2.8rem,7vw,4.5rem)] leading-none text-brand">
+            <span data-count="98" data-suffix="%">0</span>
+          </p>
+          <p class="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-steel">Clientes satisfeitos</p>
+        </div>
+        <div class="px-4 lg:border-l lg:border-line" data-reveal data-delay="4">
+          <p class="font-display text-[clamp(2.8rem,7vw,4.5rem)] leading-none text-bone">
+            <span data-count="15" data-suffix="+">0</span>
+          </p>
+          <p class="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-steel">Serviços especializados</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         ANTES E DEPOIS
+         Para uso real: substitua as duas imagens do slider por fotos reais
+         do mesmo veículo, alinhadas entre si (antes vs. depois).
+         ================================================================== -->
+    <section id="resultados" class="bg-night py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="eyebrow mb-5" data-reveal="fade">Resultados</p>
+          <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-[0.95]" data-reveal>
+            Resultados que <span class="text-brand">falam por si.</span>
+          </h2>
+        </div>
+
+        <!-- Slider interativo -->
+        <div class="ba mt-12 aspect-[4/3] w-full rounded-lg border border-line sm:aspect-[16/9]" data-ba data-reveal="zoom">
+          <div class="ba__layer">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=75"
+                 alt="Resultado final do serviço: veículo em perfeito estado" loading="lazy" width="1600" height="900" />
+          </div>
+          <div class="ba__layer ba__before">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=75"
+                 alt="Estado do veículo antes do serviço" loading="lazy" width="1600" height="900" />
+          </div>
+
+          <span class="ba__tag ba__tag--before">Antes</span>
+          <span class="ba__tag ba__tag--after">Depois</span>
+
+          <div class="ba__divider"></div>
+          <button type="button" class="ba__handle" role="slider"
+                  aria-label="Comparar antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5" /><path d="m16 7 5 5-5 5" /></svg>
+          </button>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 md:items-start">
+          <p class="font-display text-[clamp(1.6rem,3vw,2.4rem)] uppercase leading-tight" data-reveal>
+            Do diagnóstico ao <span class="text-brand">resultado final.</span>
+          </p>
+          <p class="leading-relaxed text-steel" data-reveal data-delay="1">
+            Cuidamos de cada detalhe para devolver seu carro à estrada em sua
+            melhor condição.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         DEPOIMENTOS
+         ATENÇÃO: conteúdo demonstrativo — substitua por depoimentos reais.
+         ================================================================== -->
+    <section id="depoimentos" class="border-t border-line bg-coal py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <p class="eyebrow mb-5" data-reveal="fade">Depoimentos</p>
+            <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-[0.95]" data-reveal>
+              O que nossos <span class="text-brand">clientes dizem</span>
+            </h2>
+          </div>
+          <p class="text-sm text-steel" data-reveal="fade">Arraste para o lado no mobile ▸</p>
+        </div>
+
+        <div class="t-scroll mt-14 no-scrollbar">
+          <!-- Depoimento 1 -->
+          <article class="flex flex-col rounded-lg border border-line bg-night p-7 transition-colors hover:border-brand/50" data-reveal data-delay="1">
+            <div class="flex gap-1 text-brand" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </div>
+            <p class="mt-5 flex-1 text-sm leading-relaxed text-steel">
+              “Atendimento rápido, transparente e muito profissional. Finalmente
+              encontrei uma oficina em que posso confiar.”
+            </p>
+            <div class="mt-6 flex items-center gap-3.5 border-t border-line pt-5">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=120&h=120&q=70"
+                   alt="Foto do cliente Ricardo Almeida" loading="lazy" width="48" height="48"
+                   class="h-12 w-12 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0" />
+              <div>
+                <p class="text-sm font-semibold text-bone">Ricardo Almeida</p>
+                <p class="text-xs text-steel">Toyota Corolla 2021</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 2 -->
+          <article class="flex flex-col rounded-lg border border-line bg-night p-7 transition-colors hover:border-brand/50" data-reveal data-delay="2">
+            <div class="flex gap-1 text-brand" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </div>
+            <p class="mt-5 flex-1 text-sm leading-relaxed text-steel">
+              “Levei o carro com problema no freio e resolveram no mesmo dia.
+              Explicaram tudo com clareza, sem enrolação.”
+            </p>
+            <div class="mt-6 flex items-center gap-3.5 border-t border-line pt-5">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=120&h=120&q=70"
+                   alt="Foto da cliente Fernanda Lima" loading="lazy" width="48" height="48"
+                   class="h-12 w-12 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0" />
+              <div>
+                <p class="text-sm font-semibold text-bone">Fernanda Lima</p>
+                <p class="text-xs text-steel">Honda Civic 2019</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 3 -->
+          <article class="flex flex-col rounded-lg border border-line bg-night p-7 transition-colors hover:border-brand/50" data-reveal data-delay="3">
+            <div class="flex gap-1 text-brand" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </div>
+            <p class="mt-5 flex-1 text-sm leading-relaxed text-steel">
+              “Diagnóstico preciso e orçamento sem surpresas. Recomendo para
+              quem valoriza qualidade e honestidade.”
+            </p>
+            <div class="mt-6 flex items-center gap-3.5 border-t border-line pt-5">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=120&h=120&q=70"
+                   alt="Foto do cliente Marcos Souza" loading="lazy" width="48" height="48"
+                   class="h-12 w-12 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0" />
+              <div>
+                <p class="text-sm font-semibold text-bone">Marcos Souza</p>
+                <p class="text-xs text-steel">BMW Série 3</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 4 -->
+          <article class="flex flex-col rounded-lg border border-line bg-night p-7 transition-colors hover:border-brand/50" data-reveal data-delay="4">
+            <div class="flex gap-1 text-brand" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+            </div>
+            <p class="mt-5 flex-1 text-sm leading-relaxed text-steel">
+              “Equipe cuidadosa e organizada. Meu carro saiu melhor do que eu
+              esperava — e no prazo combinado.”
+            </p>
+            <div class="mt-6 flex items-center gap-3.5 border-t border-line pt-5">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&crop=faces&w=120&h=120&q=70"
+                   alt="Foto da cliente Camila Rocha" loading="lazy" width="48" height="48"
+                   class="h-12 w-12 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0" />
+              <div>
+                <p class="text-sm font-semibold text-bone">Camila Rocha</p>
+                <p class="text-xs text-steel">Audi A3</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         MARCAS ATENDIDAS
+         ATENÇÃO: exiba apenas marcas que a empresa atenda de fato.
+         ================================================================== -->
+    <section id="marcas" class="border-t border-line bg-night py-16">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <p class="text-center text-[11px] font-bold uppercase tracking-[0.3em] text-steel" data-reveal="fade">
+          Trabalhamos com diversas marcas
+        </p>
+
+        <div class="marquee-wrap mt-9" data-reveal="fade">
+          <div class="marquee">
+            <!-- Sequência 1 -->
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">BMW</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">AUDI</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">MERCEDES-BENZ</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">TOYOTA</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">HONDA</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">FORD</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">CHEVROLET</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl">NISSAN</span>
+            <!-- Sequência 2 (igual à 1 para o efeito infinito) -->
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">BMW</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">AUDI</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">MERCEDES-BENZ</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">TOYOTA</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">HONDA</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">FORD</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">CHEVROLET</span>
+            <span class="cursor-default px-8 font-display text-3xl tracking-[0.14em] whitespace-nowrap text-[#5b5e60] transition-colors duration-300 hover:text-bone sm:text-4xl" aria-hidden="true">NISSAN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         CTA FINAL
+         ================================================================== -->
+    <section class="relative isolate overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=75"
+             alt="" aria-hidden="true" loading="lazy" width="1920" height="1280"
+             class="h-full w-full object-cover" style="object-position: 50% 55%" />
+        <div class="absolute inset-0 bg-night/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-night/85"></div>
+      </div>
+
+      <div class="mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32">
+        <p class="eyebrow mx-auto mb-6" data-reveal="fade">Agende agora</p>
+        <h2 class="font-display text-[clamp(2.4rem,7vw,5.5rem)] uppercase leading-[0.95]" data-reveal>
+          Seu carro merece o <span class="text-brand">melhor cuidado.</span>
+        </h2>
+        <p class="mx-auto mt-6 max-w-xl leading-relaxed text-steel" data-reveal data-delay="1">
+          Agende seu serviço e deixe seu veículo nas mãos de quem entende.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row" data-reveal data-delay="2">
+          <a href="#agendar" class="btn btn-primary w-full sm:w-auto">
+            Agendar agora
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </a>
+          <a href="https://wa.me/5511999999999" data-wa class="btn btn-outline w-full sm:w-auto">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         FORMULÁRIO DE AGENDAMENTO
+         ================================================================== -->
+    <section id="agendar" class="border-t border-line bg-coal py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
+          <!-- Formulário -->
+          <div>
+            <p class="eyebrow mb-5" data-reveal="fade">Agendamento</p>
+            <h2 class="font-display text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-[0.95]" data-reveal>
+              Agende seu <span class="text-brand">serviço</span>
+            </h2>
+            <p class="mt-5 max-w-xl text-steel" data-reveal data-delay="1">
+              Preencha os dados e nossa equipe entra em contato para confirmar
+              o melhor horário.
+            </p>
+
+            <form id="form-agendamento" class="mt-10 grid gap-5 sm:grid-cols-2" novalidate data-reveal data-delay="2">
+              <!-- Nome -->
+              <div class="field-group">
+                <label class="label" for="nome">Nome *</label>
+                <input class="field" type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" />
+                <p class="field-error">Informe seu nome.</p>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="field-group">
+                <label class="label" for="whatsapp">WhatsApp *</label>
+                <input class="field" type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="numeric" />
+                <p class="field-error">Informe um WhatsApp válido com DDD.</p>
+              </div>
+
+              <!-- E-mail -->
+              <div class="field-group">
+                <label class="label" for="email">E-mail</label>
+                <input class="field" type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email" />
+                <p class="field-error">Informe um e-mail válido.</p>
+              </div>
+
+              <!-- Marca -->
+              <div class="field-group">
+                <label class="label" for="marca">Marca do veículo</label>
+                <input class="field" type="text" id="marca" name="marca" placeholder="Ex.: Toyota" />
+                <p class="field-error">Campo inválido.</p>
+              </div>
+
+              <!-- Modelo -->
+              <div class="field-group">
+                <label class="label" for="modelo">Modelo</label>
+                <input class="field" type="text" id="modelo" name="modelo" placeholder="Ex.: Corolla" />
+                <p class="field-error">Campo inválido.</p>
+              </div>
+
+              <!-- Ano -->
+              <div class="field-group">
+                <label class="label" for="ano">Ano</label>
+                <input class="field" type="number" id="ano" name="ano" placeholder="Ex.: 2021" min="1950" max="2027" inputmode="numeric" />
+                <p class="field-error">Informe um ano válido.</p>
+              </div>
+
+              <!-- Serviço desejado -->
+              <div class="field-group">
+                <label class="label" for="servico">Serviço desejado *</label>
+                <select class="field" id="servico" name="servico" required>
+                  <option value="">Selecione o serviço</option>
+                  <option>Troca de óleo</option>
+                  <option>Freios</option>
+                  <option>Suspensão</option>
+                  <option>Diagnóstico</option>
+                  <option>Ar-condicionado</option>
+                  <option>Alinhamento</option>
+                  <option>Balanceamento</option>
+                  <option>Revisão</option>
+                  <option>Outro</option>
+                </select>
+                <p class="field-error">Selecione um serviço.</p>
+              </div>
+
+              <!-- Data preferencial -->
+              <div class="field-group">
+                <label class="label" for="data">Data preferencial</label>
+                <input class="field" type="date" id="data" name="data" />
+                <p class="field-error">Campo inválido.</p>
+              </div>
+
+              <!-- Horário preferencial -->
+              <div class="field-group sm:col-span-2">
+                <label class="label" for="horario">Horário preferencial</label>
+                <select class="field" id="horario" name="horario">
+                  <option value="">Selecione um horário</option>
+                  <option>Manhã — 08:00 às 10:00</option>
+                  <option>Manhã — 10:00 às 12:00</option>
+                  <option>Tarde — 13:00 às 15:00</option>
+                  <option>Tarde — 15:00 às 17:00</option>
+                  <option>Tarde — 17:00 às 18:00</option>
+                </select>
+                <p class="field-error">Campo inválido.</p>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="field-group sm:col-span-2">
+                <label class="label" for="mensagem">Mensagem / problema identificado</label>
+                <textarea class="field" id="mensagem" name="mensagem" placeholder="Descreva brevemente o que precisa ser feito ou o problema que está percebendo..."></textarea>
+                <p class="field-error">Campo inválido.</p>
+              </div>
+
+              <div class="sm:col-span-2">
+                <button type="submit" class="btn btn-primary w-full sm:w-auto">
+                  Solicitar agendamento
+                  <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                </button>
+                <p class="mt-4 text-xs leading-relaxed text-steel">
+                  Ao enviar, você poderá confirmar a solicitação pelo WhatsApp em 1 toque.
+                </p>
+              </div>
+            </form>
+
+            <!-- Confirmação -->
+            <div id="form-success" class="mt-10 rounded-lg border border-brand/50 bg-night p-8" hidden tabindex="-1">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full border border-brand text-brand">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+              </span>
+              <h3 class="mt-5 font-display text-3xl uppercase tracking-wide">Solicitação preparada!</h3>
+              <p class="mt-3 max-w-lg text-sm leading-relaxed text-steel">
+                Para concluir e agilizar o atendimento, envie os dados pelo
+                WhatsApp — nossa equipe responde rapidinho. Se preferir,
+                ligamos para você.
+              </p>
+              <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a id="wa-resumo" href="https://wa.me/5511999999999" data-wa target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Enviar pelo WhatsApp
+                  <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                </a>
+                <button type="button" id="form-reset" class="btn btn-outline">Nova solicitação</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contato direto -->
+          <aside id="contato" class="lg:sticky lg:top-28 lg:self-start" data-reveal="right" data-delay="1">
+            <div class="rounded-lg border border-line bg-night p-7">
+              <h3 class="font-display text-2xl uppercase tracking-wide">Fale conosco</h3>
+              <p class="mt-3 text-sm leading-relaxed text-steel">
+                Prefere conversar agora? Escolha o canal que for mais fácil
+                para você.
+              </p>
+
+              <ul class="mt-7 space-y-5 text-sm">
+                <li class="flex items-start gap-3.5">
+                  <span class="mt-0.5 text-brand">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                  </span>
+                  <span class="text-steel">Av. Exemplo, 1000 — Centro,<br />São Paulo/SP</span>
+                </li>
+                <li class="flex items-center gap-3.5">
+                  <span class="text-brand">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" /></svg>
+                  </span>
+                  <a href="tel:+551134567890" class="text-steel transition-colors hover:text-bone">(11) 3456-7890</a>
+                </li>
+                <li class="flex items-center gap-3.5">
+                  <span class="text-brand">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                  </span>
+                  <a href="mailto:contato@autocore.com.br" class="text-steel transition-colors hover:text-bone">contato@autocore.com.br</a>
+                </li>
+                <li class="flex items-center gap-3.5">
+                  <span class="text-brand">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                  </span>
+                  <span class="text-steel">Seg a Sex — 08:00 às 18:00<br />Sábado — 08:00 às 13:00</span>
+                </li>
+              </ul>
+
+              <a href="https://wa.me/5511999999999" data-wa class="btn btn-primary mt-8 w-full">
+                WhatsApp direto
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================================================================
+       FOOTER
+       ================================================================== -->
+  <footer id="rodape" class="border-t border-line bg-night pb-8 pt-16">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <!-- Marca -->
+        <div class="lg:col-span-2">
+          <a href="#inicio" class="flex items-center gap-3" aria-label="AUTOCORE — página inicial">
+            <svg viewBox="0 0 34 34" class="h-8 w-8" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17 2 33 32h-9.4l-2.1-4.4h-8.9L10.5 32H1L17 2Zm0 9.6-3.1 6.6h6.2L17 11.6Z"
+                    fill="#E21B16" />
+            </svg>
+            <span class="font-display text-2xl tracking-wider text-bone">AUTOCORE</span>
+          </a>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-steel">
+            Centro automotivo especializado em manutenção, diagnóstico e
+            performance. Tecnologia, transparência e cuidado em cada serviço.
+          </p>
+        </div>
+
+        <!-- Navegação -->
+        <div>
+          <h3 class="font-display text-lg uppercase tracking-[0.14em] text-bone">Navegação</h3>
+          <ul class="mt-5 space-y-3 text-sm text-steel">
+            <li><a href="#inicio" class="transition-colors hover:text-bone">Início</a></li>
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Serviços</a></li>
+            <li><a href="#sobre" class="transition-colors hover:text-bone">Sobre</a></li>
+            <li><a href="#agendar" class="transition-colors hover:text-bone">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Serviços -->
+        <div>
+          <h3 class="font-display text-lg uppercase tracking-[0.14em] text-bone">Serviços</h3>
+          <ul class="mt-5 space-y-3 text-sm text-steel">
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Freios</a></li>
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Óleo</a></li>
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Diagnóstico</a></li>
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Suspensão</a></li>
+            <li><a href="#servicos" class="transition-colors hover:text-bone">Ar-condicionado</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato + horário -->
+        <div>
+          <h3 class="font-display text-lg uppercase tracking-[0.14em] text-bone">Contato</h3>
+          <ul class="mt-5 space-y-3 text-sm text-steel">
+            <li>📍 Av. Exemplo, 1000 — São Paulo/SP</li>
+            <li>📞 <a href="tel:+551134567890" class="transition-colors hover:text-bone">(11) 3456-7890</a></li>
+            <li>💬 <a href="https://wa.me/5511999999999" data-wa class="transition-colors hover:text-bone">(11) 99999-0000</a></li>
+            <li>✉️ <a href="mailto:contato@autocore.com.br" class="transition-colors hover:text-bone">contato@autocore.com.br</a></li>
+          </ul>
+
+          <h3 class="mt-7 font-display text-lg uppercase tracking-[0.14em] text-bone">Horário</h3>
+          <ul class="mt-4 space-y-2 text-sm text-steel">
+            <li>Segunda a sexta — 08:00 às 18:00</li>
+            <li>Sábado — 08:00 às 13:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line pt-7 text-xs text-steel sm:flex-row">
+        <p>© <span data-year>2026</span> AUTOCORE — Todos os direitos reservados.</p>
+        <p class="flex items-center gap-5">
+          <a href="#" class="transition-colors hover:text-bone">Política de Privacidade</a>
+          <a href="#inicio" class="transition-colors hover:text-bone">Voltar ao topo ↑</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================================================================
+       WHATSAPP FLUTUANTE
+       ================================================================== -->
+  <a href="https://wa.me/5511999999999" data-wa
+     class="wa-float fixed right-4 bottom-4 z-50 flex items-center gap-3 rounded-full border border-line bg-coal/95 py-3 pr-4 pl-3 backdrop-blur-md sm:right-6 sm:bottom-6"
+     aria-label="WhatsApp — Fale conosco">
+    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+      </svg>
+    </span>
+    <span class="hidden leading-tight sm:block">
+      <span class="block text-sm font-semibold text-bone">WhatsApp</span>
+      <span class="block text-[11px] text-steel">Fale conosco</span>
+    </span>
+  </a>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

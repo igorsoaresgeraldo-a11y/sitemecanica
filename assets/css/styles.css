@@ -1,0 +1,670 @@
+/* ==========================================================================
+   AUTOCORE — Estilos customizados
+   Complementa o Tailwind CSS (CDN). Aqui ficam: componentes, microinterações,
+   animações de scroll, slider antes/depois e estilos de formulário.
+   ========================================================================== */
+
+:root {
+  --brand: #e21b16;
+  --brand-dark: #a90f0b;
+  --night: #050505;
+  --coal: #0d0f10;
+  --bone: #f5f5f5;
+  --steel: #b8b8b8;
+  --line: #343638;
+  --header-h: 80px;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--night);
+  color: var(--bone);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+section[id],
+div[id],
+footer[id] {
+  scroll-margin-top: calc(var(--header-h) + 8px);
+}
+
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Header fixo
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(5, 5, 5, 0.88);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--line);
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* Menu mobile (altura animada) */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.mobile-menu.is-open {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Botões
+   -------------------------------------------------------------------------- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  overflow: hidden;
+  padding: 1rem 1.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.btn .arrow {
+  transition: transform 0.35s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 65%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.7s ease;
+}
+
+.btn-primary:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -16px rgba(226, 27, 22, 0.85);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(130%);
+}
+
+.btn-outline {
+  border: 1px solid rgba(245, 245, 245, 0.32);
+  color: var(--bone);
+}
+
+.btn-outline:hover {
+  border-color: var(--bone);
+  background: rgba(245, 245, 245, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Link de texto com seta ("SAIBA MAIS →") */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone);
+  transition: color 0.3s ease;
+}
+
+.link-arrow svg {
+  transition: transform 0.35s ease;
+}
+
+.link-arrow:hover {
+  color: var(--brand);
+}
+
+.link-arrow:hover svg {
+  transform: translateX(6px);
+}
+
+/* --------------------------------------------------------------------------
+   Títulos (fonte condensada)
+   -------------------------------------------------------------------------- */
+.font-display {
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--brand);
+}
+
+/* --------------------------------------------------------------------------
+   Animações de entrada no scroll
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal="left"] {
+  transform: translateX(-34px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(34px);
+}
+
+[data-reveal="zoom"] {
+  transform: scale(0.96);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-delay="1"] {
+  transition-delay: 0.09s;
+}
+[data-delay="2"] {
+  transition-delay: 0.18s;
+}
+[data-delay="3"] {
+  transition-delay: 0.27s;
+}
+[data-delay="4"] {
+  transition-delay: 0.36s;
+}
+[data-delay="5"] {
+  transition-delay: 0.45s;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.hero__media img {
+  will-change: transform;
+}
+
+.hero__overlay {
+  background: linear-gradient(
+      100deg,
+      rgba(5, 5, 5, 0.96) 0%,
+      rgba(5, 5, 5, 0.88) 38%,
+      rgba(5, 5, 5, 0.55) 68%,
+      rgba(5, 5, 5, 0.42) 100%
+    ),
+    linear-gradient(to top, rgba(5, 5, 5, 1) 2%, rgba(5, 5, 5, 0) 34%);
+}
+
+/* --------------------------------------------------------------------------
+   Cards de serviço
+   -------------------------------------------------------------------------- */
+.service-card {
+  transition: border-color 0.4s ease, transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(226, 27, 22, 0.55);
+  transform: translateY(-6px);
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.9);
+}
+
+.service-card .service-img {
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.03);
+}
+
+.service-card .card-line {
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--brand);
+  transition: width 0.45s ease;
+}
+
+.service-card:hover .card-line {
+  width: 100%;
+}
+
+/* Painel "todos os serviços" */
+.full-services[hidden] {
+  display: none;
+}
+
+.full-services {
+  animation: panelIn 0.5s ease both;
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Faixa de números
+   -------------------------------------------------------------------------- */
+.stats-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(5, 5, 5, 0.97),
+    rgba(5, 5, 5, 0.92)
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Antes e Depois
+   -------------------------------------------------------------------------- */
+.ba {
+  position: relative;
+  overflow: hidden;
+  --pos: 50%;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ba__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.ba__layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Camada "antes": visual desbotado/sujo (troque a imagem por uma real) */
+.ba__before {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.ba__before img {
+  filter: grayscale(0.45) sepia(0.28) brightness(0.62) contrast(0.92)
+    blur(1.1px);
+}
+
+.ba__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  background: var(--bone);
+  transform: translateX(-1px);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.65);
+}
+
+.ba__handle {
+  position: absolute;
+  top: 50%;
+  left: var(--pos);
+  width: 52px;
+  height: 52px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: var(--brand);
+  border: 3px solid var(--bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.9);
+  transition: transform 0.25s ease;
+}
+
+.ba__handle:hover,
+.ba:focus-within .ba__handle {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.ba__tag {
+  position: absolute;
+  top: 16px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: rgba(5, 5, 5, 0.78);
+  border: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.ba__tag--before {
+  left: 16px;
+  color: var(--steel);
+}
+
+.ba__tag--after {
+  right: 16px;
+  color: var(--bone);
+  border-color: rgba(226, 27, 22, 0.65);
+}
+
+/* --------------------------------------------------------------------------
+   Depoimentos (carrossel no mobile / grid no desktop)
+   -------------------------------------------------------------------------- */
+.t-scroll {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+}
+
+.t-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.t-scroll > * {
+  flex: 0 0 84%;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 768px) {
+  .t-scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+  }
+  .t-scroll > * {
+    flex: initial;
+  }
+}
+
+@media (min-width: 1280px) {
+  .t-scroll {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Faixa de marcas (marquee)
+   -------------------------------------------------------------------------- */
+.marquee-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Formulário
+   -------------------------------------------------------------------------- */
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.field {
+  width: 100%;
+  padding: 0.9rem 1.05rem;
+  background: var(--coal);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--bone);
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.field::placeholder {
+  color: #6c6f72;
+}
+
+.field:focus {
+  outline: none;
+  background: #111314;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(226, 27, 22, 0.16);
+}
+
+select.field {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b8b8b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+select.field option {
+  background: var(--coal);
+  color: var(--bone);
+}
+
+input[type="date"].field::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+textarea.field {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.field-group.is-error .field {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(226, 27, 22, 0.14);
+}
+
+.field-error {
+  display: none;
+  margin-top: 0.4rem;
+  font-size: 0.76rem;
+  color: #ff7a72;
+}
+
+.field-group.is-error .field-error {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   WhatsApp flutuante
+   -------------------------------------------------------------------------- */
+.wa-float {
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.wa-float:hover {
+  transform: translateY(-3px);
+  border-color: rgba(37, 211, 102, 0.75);
+  box-shadow: 0 20px 44px -16px rgba(37, 211, 102, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Diversos
+   -------------------------------------------------------------------------- */
+.grid-lines {
+  background-image: linear-gradient(
+      to right,
+      rgba(52, 54, 56, 0.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(52, 54, 56, 0.25) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.hairline-top {
+  border-top: 1px solid var(--line);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Movimento reduzido (acessibilidade)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .marquee {
+    animation: none;
+  }
+
+  .btn,
+  .btn::after,
+  .service-card,
+  .service-card .service-img,
+  .hero__media img {
+    transition: none !important;
+    animation: none !important;
+  }
+}
