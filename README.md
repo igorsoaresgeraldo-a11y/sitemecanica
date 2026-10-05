@@ -84,9 +84,9 @@ Na seção **NÚMEROS / PROVA SOCIAL** do `index.html`:
 ### 4. Conteúdo demonstrativo (substituir por conteúdo real)
 
 - **Depoimentos** (nomes, fotos, textos)
-- **Slider Antes/Depois** — trocar as duas imagens por fotos reais do
-  mesmo veículo, alinhadas entre si (as tags `<img>` ficam na seção
-  RESULTADOS)
+- **Slider Antes/Depois** — as fotos atuais são ilustrativas (motor sujo →
+  motor limpo, veículos diferentes); troque por fotos reais do mesmo
+  veículo, alinhadas entre si (as tags `<img>` ficam na seção RESULTADOS)
 - **Marcas atendidas** — manter apenas marcas que a empresa realmente atenda
 - **Nome da empresa** — "AUTOCORE" é provisório (logo, title, JSON-LD, footer)
 
@@ -96,9 +96,15 @@ Todas vêm do Unsplash (licença livre, uso comercial permitido) via
 `images.unsplash.com`, com `auto=format` (serve WebP/AVIF automaticamente),
 `loading="lazy"` e `srcset` responsivo.
 
-**Crédito obrigatório:** o card de FREIOS usa a foto
-"Porsche Panamera Turbo S" do Wikimedia Commons, autor *InSapphoWeTrust*,
-licença **CC BY-SA 2.0** — mantenha o crédito ou troque a imagem.
+**Créditos obrigatórios** (mantenha o crédito ou troque a imagem):
+
+- Card de **FREIOS**: "Porsche Panamera Turbo S" — Wikimedia Commons,
+  autor *InSapphoWeTrust*, licença **CC BY-SA 2.0**.
+- Slider **Antes/Depois** (seção RESULTADOS):
+  - *Antes* — "Skoda Fabia Cylinder Head - Engine bay", autor
+    *L.C.Nøttaasen* (Flickr), licença **CC BY 2.0**.
+  - *Depois* — "Washed Engine", autor *b0jangles* (Flickr),
+    licença **CC BY 2.0**.
 
 Para trocar: localize a tag `<img>` e substitua a URL. Para produção,
 recomenda-se hospedar as fotos finais no próprio projeto/CDN.
